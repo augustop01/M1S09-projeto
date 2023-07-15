@@ -12,6 +12,7 @@ function ListItem(props){
       <input type="checkbox" checked={finalizado}/>
       <h3 className={finalizado && 'marcar-finalizado'}>{props.textoTarefa}</h3>
       <button onClick={() => setFinalizado(!finalizado)}>Finalizar</button>
+      <button onClick={() => props.removerTarefa(props.id)}>Remover</button>
     </div>
   )
 }
